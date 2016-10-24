@@ -34,7 +34,10 @@ var app = angular.module("myapp",["ui.router"])
 	.controller("homeController",function($scope){
 		
 		$scope.title = "首页";
-
+		var mySwiper = new Swiper('.swiper-container', {
+			autoplay: 1000,//可选选项，自动滑动
+			loop:true,
+		})
 	})
 	.controller("privilegeController",function($scope){
 		
@@ -56,3 +59,5 @@ var app = angular.module("myapp",["ui.router"])
 		
 		
 	})
+	
+
