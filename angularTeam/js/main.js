@@ -1,25 +1,49 @@
-var app = angular.module("myapp",["ui.router"])
+var app = angular.module("myapp",["ui.router","myapp.homeCtrl","myapp.privilegeCtrl","myapp.lifeCtrl","myapp.myCtrl"])
 	.config(function($stateProvider){
 		$stateProvider
-		 .state("home",{
+		 .state("tab",{
+		 	url:"/tabs",
+			templateUrl:"tab.html",
+			abstract:true,
+		 })
+		 .state("tab.home",{
 		 	url:"/home",
-		 	templateUrl:"home.html",
-		 	controller:"homeController",
+				views:{
+					"home-tab":{
+						templateUrl:"home.html",
+						controller:"homeCtrl",
+					}
+				}
 		 })
-		 .state("privilege",{
+		 .state("tab.privilege",{
 		 	url:"/privilege",
-		 	templateUrl:"privilege.html",
-		 	controller:"privilegeController",
+		 	views:{
+		 		"privilege-tab":{
+		 			templateUrl:"privilege.html",
+		 			controller:"privilegeCtrl",
+		 		}
+		 	}
+		 	
 		 })
-		 .state("life",{
+		 .state("tab.life",{
 		 	url:"/life",
-		 	templateUrl:"life.html",
-		 	controller:"lifeController",
+		 	views:{
+		 		"life-tab":{
+		 			templateUrl:"life.html",
+		 			controller:"lifeCtrl",
+		 		}
+		 	}
+		 	
 		 })
-		 .state("my",{
+		 .state("tab.my",{
 		 	url:"/my",
-		 	templateUrl:"my.html",
-		 	controller:"myController",
+		 	views:{
+		 		"my-tab":{
+		 			templateUrl:"my.html",
+		 			controller:"myCtrl",
+		 		}
+		 	}
+		 	
 		 })
 		
 	})
@@ -29,35 +53,6 @@ var app = angular.module("myapp",["ui.router"])
 	})
 	//默认页面
 	.config(function($urlRouterProvider) {
-		$urlRouterProvider.otherwise("/home");
-	})
-	.controller("homeController",function($scope){
-		
-		$scope.title = "首页";
-		var mySwiper = new Swiper('.swiper-container', {
-			autoplay: 1000,//可选选项，自动滑动
-			loop:true,
-		})
-	})
-	.controller("privilegeController",function($scope){
-		
-		
-		$scope.title = "特权";
-	})
-	.controller("lifeController",function($scope){
-		
-		
-		$scope.title = "生活";
-	})
-	.controller("myController",function($scope){
-		
-		
-		$scope.title = "我的";
-	})
-	.controller("mainCtrl",function($scope){
-		
-		
-		
+		$urlRouterProvider.otherwise("/tabs/home");
 	})
 	
-

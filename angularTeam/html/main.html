@@ -4,28 +4,20 @@
 		<meta charset="UTF-8">
     	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="../css/main.css"/>
-		 
+		<link rel="stylesheet" type="text/css" href="../css/main.css"/>		 
 	</head>
-	<body ng-app="myapp" ng-controller="mainCtrl">
-	<footer>
-		<section id='footer'>
-			<div class="pagination">
-				<a  ui-sref="home" ui-sref-active="active"><b class='iconfont'>&#xe603;</b><span>首页</span></a>
-				<a  ui-sref="privilege" ui-sref-active="active"><b class='iconfont'>&#xe62d;</b><span>特权</span></a>
-				<a  ui-sref="life" ui-sref-active="active"><b class='iconfont'>&#xe631;</b><span>生活</span></a>
-				<a  ui-sref="my" ui-sref-active="active" ><b class='iconfont'>&#xe66d;</b><span>我的</span></a>
-			</div>
-			
-	</section>
-	</footer>
-	
+	<body ng-app="myapp" >
 		<ui-view></ui-view>
-		
 	</body>
 	<script type="text/javascript" src="../js/angular.min.js"></script>
 	<script type="text/javascript" src="../js/angular-ui-router.js"></script>
 	<script type="text/javascript" src="../js/swiper.min.js"></script>
+	<!--控制器-->
+	<script type="text/javascript" src="../js/homeCtrl.js"></script>
+	<script type="text/javascript" src="../js/privilegeCtrl.js"></script>
+	<script type="text/javascript" src="../js/lifeCtrl.js"></script>
+	<script type="text/javascript" src="../js/myCtrl.js"></script>
+	<!--入口-->
 	<script type="text/javascript" src="../js/main.js"></script>
 </html>
 
