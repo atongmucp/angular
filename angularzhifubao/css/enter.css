@@ -145,17 +145,46 @@ footer {
         float: left; }
         footer #footer .pagination a .iconfont {
           display: block;
-          color: #4f4f4f;
-          margin-top: 0.625rem;
-          font-size: 1.25rem; }
+          color: #a7a7a7;
+          margin-top: 0.41667rem;
+          font-size: 1.66667rem; }
         footer #footer .pagination a span {
-          font-size: 0.75rem;
-          color: #464646;
-          margin-top: 0.33333rem;
+          font-size: 1rem;
+          color: #a7a7a7;
           display: block; }
       footer #footer .pagination .active b {
-        color: red !important; }
+        color: #00aaee !important; }
       footer #footer .pagination .active span {
-        color: red !important; }
+        color: #00aaee !important; }
+
+header {
+  width: 100%;
+  height: 3.54167rem;
+  background: #262a3b;
+  box-sizing: border-box;
+  padding-left: 1.08333rem;
+  padding-right: 1.08333rem;
+  display: flex; }
+  header div {
+    width: 50%;
+    height: 3.54167rem;
+    display: flex; }
+  header .left {
+    justify-content: flex-start;
+    align-items: center; }
+    header .left .icon {
+      font-size: 1.54167rem;
+      color: white;
+      padding-right: 0.875rem; }
+    header .left span {
+      font-size: 1.16667rem;
+      color: white; }
+  header .right {
+    justify-content: flex-end;
+    align-items: center; }
+    header .right .icon {
+      font-size: 1.54167rem;
+      color: white;
+      padding-left: 2.04167rem; }
 
 /*# sourceMappingURL=enter.css.map */
