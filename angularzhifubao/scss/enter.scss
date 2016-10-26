@@ -1,0 +1,70 @@
+@import "mobile";
+@import '../icon/ux/iconfont.css';
+
+ body,html{
+    width: 100%;
+    height: 100%;
+                
+}
+
+footer{
+   z-index: 5;
+   width:100%;
+   height:pxToRem(96);
+   position: fixed;
+   bottom:0;
+   left:0;
+    #footer{
+         z-index: 5;
+         width:100%;
+         height:pxToRem(96);
+         border-top:pxToRem(1) solid #636363;
+         background: #ffffff;
+         display: flex;
+           text-align: center;
+           position: absolute;
+           bottom:0;
+           left:0;
+           .pagination {
+            width:100%;
+             height:100%;
+               display: flex;
+             a{
+                 display: block;
+                width:25%;
+                 height:100%;
+                 float: left;
+                  .iconfont{
+                    display: block;
+                    color: #4f4f4f;
+                    margin-top: pxToRem(15);
+                    font-size:pxToRem(30) ;
+                }
+                
+                 span{
+                      font-size:pxToRem(18) ;
+                      color: #464646;
+                   margin-top: pxToRem(8);
+                      display: block;
+                 }
+             }
+            .active{
+                     
+                     b{
+                        color:red!important;
+                     }
+                     span{
+                        color:red!important;
+                     }
+                 }
+            
+        }
+       }
+}
+
+
+
+
+
+
+            
